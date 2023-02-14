@@ -1,13 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./style.less";
 import {
   LowCodeDesigner,
   useDesignerLayout,
-} from "@mananaunited/low-code-formily-design";
-import { useComponents } from "./useComponents";
+} from "@mananaunited/low-code-formily-design/lib/index";
+import "./App.less";
+import { useComponents } from "./hooks/useComponents";
 
-const App = () => {
+const App: React.FunctionComponent = () => {
   const { designer } = useDesignerLayout();
   const customComponents = useComponents();
   return (
@@ -15,4 +14,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;

@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
+import "./styles.less";
 
 export type TDemoComponentProps = {};
 
-export const Demo: React.FunctionComponent<TDemoComponentProps> = (props) => {
-  return <div>{JSON.stringify(props)}</div>;
+/* 预览时显示的组件 */
+export const DemoProview: React.FunctionComponent<TDemoComponentProps> = () => {
+  return <div className={"blue"}>preview 12341234</div>;
 };

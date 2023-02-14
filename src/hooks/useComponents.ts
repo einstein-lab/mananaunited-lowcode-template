@@ -1,5 +1,4 @@
-import { DemoComponent } from "./components";
-import { Demo } from "./components/demo/preview";
+import { DemoComponent, DemoProview } from "../components";
 
 export const useComponents = () => {
   return [
@@ -7,7 +6,7 @@ export const useComponents = () => {
       name: "DemoComponent",
       type: "分类1",
       design: DemoComponent,
-      preview: Demo,
+      preview: DemoProview,
     },
   ];
 };

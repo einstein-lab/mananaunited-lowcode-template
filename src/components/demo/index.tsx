@@ -1,11 +1,13 @@
 import React from "react";
 import { createBehavior, createResource } from "@mananaunited/low-code-core";
 import { DnFC, LowCodeIcon } from "@mananaunited/low-code-react";
-import { createFieldSchema } from "./fields";
-import { DemoComponentSchema } from "./schema";
-import { DemoComponentLocales } from "./locales";
 import { observer } from "@formily/react";
 import { Demo, TDemoComponentProps } from "./component";
+import { createFieldSchema } from "../../utils/fields";
+import { DemoComponentSchema } from "../../schema";
+import { DemoComponentLocales } from "../../locales";
+
+export { DemoProview } from "./preview";
 
 export const DemoComponent: DnFC<React.FunctionComponent<TDemoComponentProps>> =
   observer(Demo);
@@ -20,7 +22,7 @@ export const demo = {
 DemoComponent.Behavior = createBehavior({
   name: "DemoComponent",
   extends: ["Field"],
-  selector: (node) => node.props["x-component"] === "DemoComponent",
+  selector: (node) => node.props?.["x-component"] === "DemoComponent",
   designerProps: {
     propsSchema: createFieldSchema(DemoComponentSchema),
     icon: <LowCodeIcon name="lc-button" />,
