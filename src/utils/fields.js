@@ -1,4 +1,3 @@
-import { ISchema } from "@formily/react";
 import { ENoPackType } from "@mananaunited/low-code-extension";
 import { AllSchemas } from "@mananaunited/low-code-formily-antd";
 import {
@@ -8,9 +7,9 @@ import {
 } from "@mananaunited/low-code-formily-setters";
 
 export const createFieldSchema = (
-  component: ISchema,
-  decorator: ISchema = AllSchemas.FormItem
-): ISchema => {
+  component,
+  decorator = AllSchemas.FormItem
+) => {
   return {
     type: "object",
     properties: {
@@ -94,10 +93,7 @@ export const createFieldSchema = (
   };
 };
 
-export const createComponentSchema = (
-  component: ISchema,
-  decorator: ISchema
-) => {
+export const createComponentSchema = (component, decorator) => {
   return {
     "component-group": component && {
       type: "void",

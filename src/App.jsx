@@ -1,12 +1,11 @@
-import React from "react";
 import {
   LowCodeDesigner,
   useDesignerLayout,
 } from "@mananaunited/low-code-formily-design/lib/index";
-import "./App.less";
+import "./App.css";
 import { useComponents } from "./hooks/useComponents";
 
-const App: React.FunctionComponent = () => {
+const App = () => {
   const { designer } = useDesignerLayout();
   const customComponents = useComponents();
   return (
