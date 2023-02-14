@@ -2,15 +2,14 @@ import React from "react";
 import { createBehavior, createResource } from "@mananaunited/low-code-core";
 import { DnFC, LowCodeIcon } from "@mananaunited/low-code-react";
 import { observer } from "@formily/react";
-import { Demo, TDemoComponentProps } from "./component";
+import { Demo } from "./component";
 import { createFieldSchema } from "../../utils/fields";
 import { DemoComponentSchema } from "../../schema";
 import { DemoComponentLocales } from "../../locales";
 
 export { DemoProview } from "./preview";
 
-export const DemoComponent: DnFC<React.FunctionComponent<TDemoComponentProps>> =
-  observer(Demo);
+export const DemoComponent: DnFC = observer(Demo);
 
 export const demo = {
   name: "Demo",
