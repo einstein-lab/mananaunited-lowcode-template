@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.less";
 
 /* 编辑时显示的组件 */
 export const Demo = () => {

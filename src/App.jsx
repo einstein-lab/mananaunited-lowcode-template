@@ -2,7 +2,7 @@ import {
   LowCodeDesigner,
   useDesignerLayout,
 } from "@mananaunited/low-code-formily-design/lib/index";
-import "./App.css";
+import "./App.less";
 import { useComponents } from "./hooks/useComponents";
 
 const App = () => {
