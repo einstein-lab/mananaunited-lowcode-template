@@ -1,1 +1,4 @@
-export * from "./demo";
+import { DemoComponent } from "./demo/index";
+export default {
+  DemoComponent,
+};

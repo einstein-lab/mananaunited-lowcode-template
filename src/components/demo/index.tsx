@@ -1,21 +1,15 @@
 import { createBehavior, createResource } from "@mananaunited/low-code-core";
-import { DnFC, LowCodeIcon } from "@mananaunited/low-code-react";
+import { DnFC } from "@mananaunited/low-code-react";
 import { observer } from "@formily/react";
 import { Demo } from "./component";
 import { createFieldSchema } from "../../utils/fields";
 import { DemoComponentSchema } from "../../schema";
 import { DemoComponentLocales } from "../../locales";
-
-export { DemoProview } from "./preview";
+import { SafetyCertificateOutlined } from "@ant-design/icons";
+import React from "react";
+import { DemoPreview } from "./preview";
 
 export const DemoComponent: DnFC = observer(Demo);
-
-export const demo = {
-  name: "Demo",
-  type: "分类1",
-  design: DemoComponent,
-  preview: Demo,
-};
 
 DemoComponent.Behavior = createBehavior({
   name: "DemoComponent",
@@ -23,13 +17,13 @@ DemoComponent.Behavior = createBehavior({
   selector: (node) => node.props?.["x-component"] === "DemoComponent",
   designerProps: {
     propsSchema: createFieldSchema(DemoComponentSchema),
-    icon: <LowCodeIcon name="lc-button" />,
+    icon: <SafetyCertificateOutlined />,
   },
   designerLocales: DemoComponentLocales,
 });
 
 DemoComponent.Resource = createResource({
-  icon: <LowCodeIcon name="lc-button" />,
+  icon: <SafetyCertificateOutlined />,
   elements: [
     {
       componentName: "Field",
@@ -47,3 +41,10 @@ DemoComponent.Resource = createResource({
     },
   ],
 });
+
+export default {
+  name: "DemoComponent",
+  type: "分类1",
+  design: DemoComponent,
+  preview: DemoPreview,
+};
