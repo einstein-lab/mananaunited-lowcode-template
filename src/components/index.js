@@ -1,1 +1,5 @@
-export * from "./demo";
+import DemoComponent from "./demo";
+
+export default {
+  DemoComponent,
+};

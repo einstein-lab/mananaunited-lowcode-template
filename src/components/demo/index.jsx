@@ -5,17 +5,9 @@ import { Demo } from "./component";
 import { createFieldSchema } from "../../utils/fields";
 import { DemoComponentSchema } from "../../schema";
 import { DemoComponentLocales } from "../../locales";
-
-export { DemoProview } from "./preview";
+import { DemoPreview } from "./preview";
 
 export const DemoComponent = observer(Demo);
-
-export const demo = {
-  name: "Demo",
-  type: "分类1",
-  design: DemoComponent,
-  preview: Demo,
-};
 
 DemoComponent.Behavior = createBehavior({
   name: "DemoComponent",
@@ -47,3 +39,10 @@ DemoComponent.Resource = createResource({
     },
   ],
 });
+
+export default {
+  name: "Demo",
+  type: "分类1",
+  design: DemoComponent,
+  preview: DemoPreview,
+};
