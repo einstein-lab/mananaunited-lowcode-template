@@ -10,13 +10,6 @@ export { DemoProview } from "./preview";
 
 export const DemoComponent = observer(Demo);
 
-export const demo = {
-  name: "Demo",
-  type: "分类1",
-  design: DemoComponent,
-  preview: Demo,
-};
-
 DemoComponent.Behavior = createBehavior({
   name: "DemoComponent",
   extends: ["Field"],
@@ -47,3 +40,10 @@ DemoComponent.Resource = createResource({
     },
   ],
 });
+
+export default {
+  name: "DemoComponent",
+  type: "分类1",
+  design: DemoComponent,
+  preview: DemoProview,
+};

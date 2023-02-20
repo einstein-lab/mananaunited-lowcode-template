@@ -6,7 +6,7 @@ module.exports = () => {
   return {
     stats: "errors-warnings",
     // 指定入口文件
-    entry: path.resolve(__dirname, "../src/components/index.ts"),
+    entry: path.resolve(__dirname, "../src/components/index.js"),
     // 指定打包文件的目录
     output: {
       path: path.resolve(__dirname, "../dist"),
@@ -42,34 +42,13 @@ module.exports = () => {
       // 指定loader加载的规则
       rules: [
         {
-          // test指定规则生效的文件
-          test: /\.(ts|tsx)$/,
-          use: [
-            // 配置babel
-            {
-              // 指定加载器
-              loader: "babel-loader",
-              // 设置babel
-              options: {
-                presets: [
-                  [
-                    // 指定环境的插件
-                    "@babel/preset-env",
-                  ],
-                ],
-                cacheDirectory: true,
-                cacheCompression: false,
-                compact: true,
-              },
+          test: /\.(js|jsx)$/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env", "@babel/preset-react"],
             },
-            {
-              loader: "ts-loader",
-              options: {
-                transpileOnly: true, // 只做语言转换，而不做类型检查
-              },
-            },
-          ],
-          exclude: [path.resolve(__dirname, "node_modules")],
+          },
         },
         {
           test: /\.css$/,
