@@ -6,7 +6,6 @@ import { createFieldSchema } from "../../utils/fields";
 import { DemoComponentSchema } from "../../schema";
 import { DemoComponentLocales } from "../../locales";
 import { SafetyCertificateOutlined } from "@ant-design/icons";
-import React from "react";
 import { DemoPreview } from "./preview";
 
 export const DemoComponent: DnFC = observer(Demo);
