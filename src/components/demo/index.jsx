@@ -41,7 +41,7 @@ DemoComponent.Resource = createResource({
 });
 
 export default {
-  name: "Demo",
+  name: "DemoComponent",
   type: "分类1",
   design: DemoComponent,
   preview: DemoPreview,
