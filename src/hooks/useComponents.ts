@@ -1,12 +1,5 @@
-import { DemoComponent, DemoProview } from "../components";
+import components from "../components";
 
 export const useComponents = () => {
-  return [
-    {
-      name: "DemoComponent",
-      type: "分类1",
-      design: DemoComponent,
-      preview: DemoProview,
-    },
-  ];
+  return Object.values(components);
 };

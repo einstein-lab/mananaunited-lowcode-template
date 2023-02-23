@@ -1,12 +1,13 @@
 import React from "react";
 import { createBehavior, createResource } from "@mananaunited/low-code-core";
-import { DnFC, LowCodeIcon } from "@mananaunited/low-code-react";
+import { DnFC } from "@mananaunited/low-code-react";
 import { observer } from "@formily/react";
 import { Demo } from "./component";
 import { createFieldSchema } from "../../utils/fields";
 import { DemoComponentSchema } from "../../schema";
 import { DemoComponentLocales } from "../../locales";
 import { DemoPreview } from "./preview";
+import { HeatMapOutlined } from "@ant-design/icons";
 
 export const DemoComponent: DnFC = observer(Demo);
 
@@ -16,13 +17,13 @@ DemoComponent.Behavior = createBehavior({
   selector: (node) => node.props?.["x-component"] === "DemoComponent",
   designerProps: {
     propsSchema: createFieldSchema(DemoComponentSchema),
-    icon: <LowCodeIcon name="lc-button" />,
+    icon: <HeatMapOutlined />,
   },
   designerLocales: DemoComponentLocales,
 });
 
 DemoComponent.Resource = createResource({
-  icon: <LowCodeIcon name="lc-button" />,
+  icon: <HeatMapOutlined />,
   elements: [
     {
       componentName: "Field",
@@ -42,7 +43,7 @@ DemoComponent.Resource = createResource({
 });
 
 export default {
-  name: "Demo",
+  name: "DemoComponent",
   type: "分类1",
   design: DemoComponent,
   preview: DemoPreview,

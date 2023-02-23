@@ -12,28 +12,32 @@ module.exports = () => {
       path: path.resolve(__dirname, "../dist"),
       // 打包后文件名称
       filename: "index.js",
-      library: "lowcode",
-      libraryTarget: "umd",
+      library: {
+        name: "lowcode",
+        type: "global",
+      },
     },
     externals: {
-      "@ant-design/icons": "@ant-design/icons",
-      antd: "antd",
       react: "React",
-      "react-dom": "ReactDom",
-      "@mananaunited/low-code-core": "@mananaunited/low-code-core",
-      "@mananaunited/low-code-extension": "@mananaunited/low-code-extension",
-      "@mananaunited/low-code-formily-antd":
-        "@mananaunited/low-code-formily-antd",
-      "@mananaunited/low-code-formily-design":
-        "@mananaunited/low-code-formily-design",
-      "@mananaunited/low-code-formily-setters":
-        "@mananaunited/low-code-formily-setters",
-      "@mananaunited/low-code-formily-transformer":
-        "@mananaunited/low-code-formily-transformer",
-      "@mananaunited/low-code-react": "@mananaunited/low-code-react",
-      "@mananaunited/low-code-react-settings-form":
-        "@mananaunited/low-code-react-settings-form",
-      "@mananaunited/low-code-shared": "@mananaunited/low-code-shared",
+      "react-dom": "ReactDOM",
+      "@mananaunited/low-code-core": ["Designable", "Core"],
+      "@mananaunited/low-code-extension": ["Designable", "Extension"],
+      "@mananaunited/low-code-shared": ["Designable", "Shared"],
+      "@mananaunited/low-code-react-settings-form": [
+        "Designable",
+        "ReactSettingsForm",
+      ],
+      "@mananaunited/low-code-react": ["Designable", "React"],
+      "@mananaunited/low-code-formily-transformer": [
+        "Designable",
+        "FormilyTransformer",
+      ],
+      "@mananaunited/low-code-formily-setters": [
+        "Designable",
+        "FormilySetters",
+      ],
+      "@mananaunited/low-code-formily-design": ["Designable", "FormilyDesign"],
+      "@mananaunited/low-code-formily-antd": ["Designable", "FormilyAntd"],
     },
     target: "web",
     mode: "production",
@@ -102,7 +106,7 @@ module.exports = () => {
     },
     /* 是否压缩代码 */
     optimization: {
-      minimize: false,
+      minimize: true,
       usedExports: true,
       providedExports: true,
     },
