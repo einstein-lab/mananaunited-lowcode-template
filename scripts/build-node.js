@@ -8,6 +8,5 @@ webpack(config).run((error, state) => {
   if (error) {
     console.error(error);
   }
-  console.log(Object.keys(state.compilation));
   console.log("build success");
 });

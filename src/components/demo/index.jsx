@@ -5,8 +5,7 @@ import { Demo } from "./component";
 import { createFieldSchema } from "../../utils/fields";
 import { DemoComponentSchema } from "../../schema";
 import { DemoComponentLocales } from "../../locales";
-
-export { DemoProview } from "./preview";
+import { DemoPreview } from "./preview";
 
 export const DemoComponent = observer(Demo);
 
@@ -45,5 +44,5 @@ export default {
   name: "DemoComponent",
   type: "分类1",
   design: DemoComponent,
-  preview: DemoProview,
+  preview: DemoPreview,
 };
