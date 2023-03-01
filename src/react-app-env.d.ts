@@ -78,6 +78,6 @@ declare module "*.module.sass" {
 
 declare global {
   interface Window {
-    lowcode: TComponent[];
+    lowcode: Record<string, TComponent>;
   }
 }
