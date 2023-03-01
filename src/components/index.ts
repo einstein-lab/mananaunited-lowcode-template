@@ -4,4 +4,7 @@ export default {
   DemoComponent,
 };
 
-window.lowcode = [...(window?.lowcode ?? []), DemoComponent];
+window.lowcode = {
+  ...(window?.lowcode ?? {}),
+  DemoComponent,
+};
