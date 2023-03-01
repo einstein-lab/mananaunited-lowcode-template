@@ -12,10 +12,6 @@ module.exports = () => {
       path: path.resolve(__dirname, "../dist"),
       // 打包后文件名称
       filename: "index.js",
-      library: {
-        name: "lowcode",
-        type: "global",
-      },
     },
     externals: {
       "react-dom": "ReactDOM",
@@ -56,7 +52,7 @@ module.exports = () => {
         {
           test: /\.css$/,
           use: ["style-loader", "css-loader"],
-        }
+        },
       ],
     },
 
