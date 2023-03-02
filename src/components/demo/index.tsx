@@ -43,7 +43,7 @@ DemoComponent.Resource = createResource({
 
 export default {
   name: "DemoComponent",
-  type: "分类1",
+  from: "ts-css",
   design: DemoComponent,
   preview: DemoPreview,
 };
