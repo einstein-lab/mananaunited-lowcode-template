@@ -34,6 +34,13 @@ module.exports = () => {
       ],
       "@mananaunited/low-code-formily-design": ["Designable", "FormilyDesign"],
       "@mananaunited/low-code-formily-antd": ["Designable", "FormilyAntd"],
+      /* formily依赖 */
+      "@formily/core": ["Formily", "Core"],
+      "@formily/react": ["Formily", "React"],
+      "@formily/reactive": ["Formily", "Reactive"],
+      "@formily/antd": ["Formily", "Antd"],
+      "@formily/reactive-react": ["Formily", "ReactiveReact"],
+      "@formily/shared": ["Formily", "Shared"],
     },
     target: "web",
     mode: "production",
