@@ -1,5 +1,6 @@
 // 引入一个路径包
 const path = require("path");
+const ProgressBarPlugin = require("progress-bar-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = () => {
@@ -87,7 +88,7 @@ module.exports = () => {
 
     // 配置Webpack 插件
     // clean-webpack-plugin：webpack中的清除插件，每次打包dist都会先清除目录
-    plugins: [new CleanWebpackPlugin()],
+    plugins: [new CleanWebpackPlugin(), new ProgressBarPlugin()],
 
     // 用来设置引用模块，可以将这些文件识别为模块(webpack配置.ts .js结尾的文件可为引用模块，相互export import)
     resolve: {
